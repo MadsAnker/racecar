@@ -14,7 +14,7 @@ volatile uint16_t xaccel, centri, xspeed, xpos;
 int currentAxis = 0;
 
 void __interrupt () isr(void) {
-    if (INTCON & 0b00000100) {
+    if (PIR1 & 0b00000001) {
         if (currentAxis == 0) {
             PORTC = 0b00001000;
             currentAxis = 1;
@@ -22,7 +22,7 @@ void __interrupt () isr(void) {
             PORTC = 0b00000000;
             currentAxis = 0;
         }
-        INTCON &= 0b11111011;
+        PIR1 = (PIR1 & 0b11111110);
     }
 }
 
@@ -42,12 +42,16 @@ void main(void) {
     ADCON1 = 0b00010000;
     //PWM
     CCP1CON = 0b00001100;
+    CCPR1L = 0b00100000;
     T2CON = 0b00000111;
-    PR2 = 0b01100011;
-    INTCON = 0b11100000;
-    OPTION_REG = 0b00000111;
+    PR2 = 0b00000000;
+    //Interrupts
+    INTCON = 0b11000000;
+    T1CON = 0b001100001;
+    PIE1 = 0b00000001;
+    //  PORTC = 0b00001000;
     while (1) {
-    }
+    }  
 }
 
 void readAccel(void) {
