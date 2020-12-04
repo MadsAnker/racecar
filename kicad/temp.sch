@@ -713,4 +713,38 @@ F 3 "~" H 2450 5950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2650 6300 2650 5950
+$Comp
+L Transistor_BJT:TIP120 Q2
+U 1 1 5FCA66AB
+P 1300 4400
+F 0 "Q2" H 1507 4354 50  0000 L CNN
+F 1 "TIP120" H 1507 4445 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 1500 4325 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 1300 4400 50  0001 L CNN
+	1    1300 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J22
+U 1 1 5FCA81CF
+P 1900 4400
+F 0 "J22" H 1872 4332 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 1872 4423 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1900 4400 50  0001 C CNN
+F 3 "~" H 1900 4400 50  0001 C CNN
+	1    1900 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1500 4400 1500 4500
+Wire Wire Line
+	1500 4500 1700 4500
+Text GLabel 1200 4600 3    50   Input ~ 0
+Coll
+Text GLabel 1700 4400 0    50   Input ~ 0
+Coll
+Wire Wire Line
+	1200 4200 1700 4200
+Wire Wire Line
+	1700 4200 1700 4300
 $EndSCHEMATC
