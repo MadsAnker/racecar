@@ -533,4 +533,184 @@ F 3 "~" H 7300 2250 50  0001 C CNN
 	1    7300 2250
 	-1   0    0    1   
 $EndComp
+$Comp
+L Connector:Conn_01x05_Male J18
+U 1 1 5FCA654C
+P 2450 6500
+F 0 "J18" H 2558 6881 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 2558 6790 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 2450 6500 50  0001 C CNN
+F 3 "~" H 2450 6500 50  0001 C CNN
+	1    2450 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FCAB6B2
+P 3700 6100
+F 0 "R2" V 3493 6100 50  0000 C CNN
+F 1 "R" V 3584 6100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3630 6100 50  0001 C CNN
+F 3 "~" H 3700 6100 50  0001 C CNN
+	1    3700 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5FCABBAA
+P 3700 6550
+F 0 "R3" V 3493 6550 50  0000 C CNN
+F 1 "R" V 3584 6550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3630 6550 50  0001 C CNN
+F 3 "~" H 3700 6550 50  0001 C CNN
+	1    3700 6550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FCABEDD
+P 3850 6900
+F 0 "C2" H 3735 6854 50  0000 R CNN
+F 1 "C" H 3735 6945 50  0000 R CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm" H 3888 6750 50  0001 C CNN
+F 3 "~" H 3850 6900 50  0001 C CNN
+	1    3850 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5FCAC448
+P 4200 6300
+F 0 "C4" H 4085 6254 50  0000 R CNN
+F 1 "C" H 4085 6345 50  0000 R CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm" H 4238 6150 50  0001 C CNN
+F 3 "~" H 4200 6300 50  0001 C CNN
+	1    4200 6300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 6100 4200 6100
+Wire Wire Line
+	4200 6100 4200 6150
+Wire Wire Line
+	3850 6550 3850 6750
+Wire Wire Line
+	2650 6400 3550 6400
+Wire Wire Line
+	3550 6400 3550 6100
+Wire Wire Line
+	2650 6500 3550 6500
+Wire Wire Line
+	3550 6500 3550 6550
+$Comp
+L power:Earth #PWR015
+U 1 1 5FCB1E34
+P 4200 6450
+F 0 "#PWR015" H 4200 6200 50  0001 C CNN
+F 1 "Earth" H 4200 6300 50  0001 C CNN
+F 2 "" H 4200 6450 50  0001 C CNN
+F 3 "~" H 4200 6450 50  0001 C CNN
+	1    4200 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR014
+U 1 1 5FCB24DE
+P 3850 7050
+F 0 "#PWR014" H 3850 6800 50  0001 C CNN
+F 1 "Earth" H 3850 6900 50  0001 C CNN
+F 2 "" H 3850 7050 50  0001 C CNN
+F 3 "~" H 3850 7050 50  0001 C CNN
+	1    3850 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 6550 4000 6550
+Connection ~ 3850 6550
+Wire Wire Line
+	4200 6100 4450 6100
+Connection ~ 4200 6100
+$Comp
+L Connector:Conn_01x01_Male J20
+U 1 1 5FCB7440
+P 4000 6750
+F 0 "J20" V 4154 6662 50  0000 R CNN
+F 1 "Conn_01x01_Male" V 4063 6662 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4000 6750 50  0001 C CNN
+F 3 "~" H 4000 6750 50  0001 C CNN
+	1    4000 6750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J21
+U 1 1 5FCB9965
+P 4450 6300
+F 0 "J21" V 4604 6212 50  0000 R CNN
+F 1 "Conn_01x01_Male" V 4513 6212 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4450 6300 50  0001 C CNN
+F 3 "~" H 4450 6300 50  0001 C CNN
+	1    4450 6300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2750 6600 2650 6600
+$Comp
+L power:Earth #PWR012
+U 1 1 5FCAAA79
+P 2750 6600
+F 0 "#PWR012" H 2750 6350 50  0001 C CNN
+F 1 "Earth" H 2750 6450 50  0001 C CNN
+F 2 "" H 2750 6600 50  0001 C CNN
+F 3 "~" H 2750 6600 50  0001 C CNN
+	1    2750 6600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 6700 2750 6700
+$Comp
+L power:Earth #PWR013
+U 1 1 5FCA8B12
+P 2750 6700
+F 0 "#PWR013" H 2750 6450 50  0001 C CNN
+F 1 "Earth" H 2750 6550 50  0001 C CNN
+F 2 "" H 2750 6700 50  0001 C CNN
+F 3 "~" H 2750 6700 50  0001 C CNN
+	1    2750 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J19
+U 1 1 5FCBC509
+P 2500 7100
+F 0 "J19" H 2608 7281 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 2608 7190 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2500 7100 50  0001 C CNN
+F 3 "~" H 2500 7100 50  0001 C CNN
+	1    2500 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR011
+U 1 1 5FCBCC5A
+P 2700 7100
+F 0 "#PWR011" H 2700 6850 50  0001 C CNN
+F 1 "Earth" H 2700 6950 50  0001 C CNN
+F 2 "" H 2700 7100 50  0001 C CNN
+F 3 "~" H 2700 7100 50  0001 C CNN
+	1    2700 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J17
+U 1 1 5FCBD02D
+P 2450 5950
+F 0 "J17" H 2558 6131 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 2558 6040 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 2450 5950 50  0001 C CNN
+F 3 "~" H 2450 5950 50  0001 C CNN
+	1    2450 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 6300 2650 5950
 $EndSCHEMATC
