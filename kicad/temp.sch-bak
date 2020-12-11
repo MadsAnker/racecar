@@ -711,8 +711,6 @@ F 3 "~" H 2450 5950 50  0001 C CNN
 	1    2450 5950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2650 6300 2650 5950
 $Comp
 L Transistor_BJT:TIP120 Q2
 U 1 1 5FCA66AB
@@ -747,4 +745,68 @@ Wire Wire Line
 	1200 4200 1700 4200
 Wire Wire Line
 	1700 4200 1700 4300
+$Comp
+L Regulator_Linear:LM7805_TO220 U3
+U 1 1 5FD652D0
+P 1500 5250
+F 0 "U3" H 1500 5492 50  0000 C CNN
+F 1 "LM7805_TO220" H 1500 5401 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 1500 5475 50  0001 C CIN
+F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 1500 5200 50  0001 C CNN
+	1    1500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 5550 1500 5750
+$Comp
+L pspice:C C6
+U 1 1 5FD652D7
+P 1950 5500
+F 0 "C6" H 2128 5546 50  0000 L CNN
+F 1 "C" H 2128 5455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm" H 1950 5500 50  0001 C CNN
+F 3 "~" H 1950 5500 50  0001 C CNN
+	1    1950 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 5250 1950 5250
+Wire Wire Line
+	1000 5250 1200 5250
+$Comp
+L pspice:C C5
+U 1 1 5FD652DD
+P 1000 5500
+F 0 "C5" H 1178 5546 50  0000 L CNN
+F 1 "C" H 1178 5455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm" H 1000 5500 50  0001 C CNN
+F 3 "~" H 1000 5500 50  0001 C CNN
+	1    1000 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR016
+U 1 1 5FD738B4
+P 1500 5750
+F 0 "#PWR016" H 1500 5500 50  0001 C CNN
+F 1 "Earth" H 1500 5600 50  0001 C CNN
+F 2 "" H 1500 5750 50  0001 C CNN
+F 3 "~" H 1500 5750 50  0001 C CNN
+	1    1500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 5250 2250 5250
+Connection ~ 1950 5250
+Text GLabel 2250 5250 2    50   Input ~ 0
+3.3V
+Text GLabel 2650 6300 2    50   Input ~ 0
+3.3V
+Wire Wire Line
+	1000 5250 850  5250
+Connection ~ 1000 5250
+Text GLabel 850  5250 0    50   Input ~ 0
+Power
+Text GLabel 2650 5950 2    50   Input ~ 0
+Power
 $EndSCHEMATC
